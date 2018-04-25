@@ -1,0 +1,8 @@
+*.vs
+
+*.vcxproj*
+
+*.sln
+
+# Leading **/ matches any files or directories named Debug
+**/Debug/
