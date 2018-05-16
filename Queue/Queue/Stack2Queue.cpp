@@ -1,5 +1,5 @@
 // Implementation of Queue using 2 stacks
-#include "Queue.h"
+#include "Stack2Queue.h"
 
 Stack::Stack(int Top1, int *Arr1)
 {
