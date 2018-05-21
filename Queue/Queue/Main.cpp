@@ -32,6 +32,8 @@ int PopStack(Node *&OutTop)
 }
 
 // Method 2: EnQueue is costly
+// Hard to access Rear
+// Have to move back & forth for every new element pushed
 void EnQueue2(Queue *&OutQ, int Item)
 {
 	// While Stack 1 is not empty, push everything to Stack 2
@@ -60,7 +62,8 @@ int DeQueue2(Queue *&OutQ)
 }
 
 // Method 1: DeQueue is costly 
-// TODO: Fix DeQueue bug
+// Stack 1 Top = Rear, Stack 2 Top = Front
+// Only have to push once in a while (unless Enqueue & Dequeue continuously)
 void EnQueue(Queue *&OutQ, int Item)
 {
 	PushStack(OutQ->Stack1, Item);
@@ -97,6 +100,12 @@ int main()
 	EnQueue(q1, 5);
 
 	Dequeue(q1);
+	Dequeue(q1);
+
+	EnQueue(q1, 7);
+	Dequeue(q1);
+
+	EnQueue(q1, 5);
 	Dequeue(q1);
 	Dequeue(q1);
 	Dequeue(q1);
