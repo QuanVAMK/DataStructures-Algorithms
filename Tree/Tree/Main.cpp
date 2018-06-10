@@ -78,6 +78,33 @@ void LevelOrderTraversal(BstNode *&Root)
 	
 }
 
+void PreOrderTraversal(BstNode *&Root)
+{
+	if (!Root) { return; }
+
+	PreOrderTraversal(Root->Left);
+	std::cout << Root->Data << " ";
+	PreOrderTraversal(Root->Right);
+}
+
+void InOrderTraversal(BstNode *&Root)
+{
+	if (!Root) { return; }
+
+	std::cout << Root->Data << " ";
+	InOrderTraversal(Root->Left);
+	InOrderTraversal(Root->Right);
+}
+
+void PostOrderTraversal(BstNode *&Root)
+{
+	if (!Root) { return; }
+
+	PostOrderTraversal(Root->Right);
+	std::cout << Root->Data << " ";
+	PostOrderTraversal(Root->Left);
+}
+
 Queue::Queue(int NewCapacity)
 {
 	Capacity = NewCapacity;
@@ -146,6 +173,11 @@ int main()
 	*/
 	std::cout << IsSearchable(Root, 5) << IsSearchable(Root, 26) << FindTreeHeight(Root) << std::endl;
 	LevelOrderTraversal(Root);
+
+	PreOrderTraversal(Root);
+	InOrderTraversal(Root);
+	PostOrderTraversal(Root);
+
 	return 0;
 }
 

@@ -45,5 +45,11 @@ int FindTreeHeight(const BstNode *&Root);
 
 void LevelOrderTraversal(BstNode *&Root);
 
+void InOrderTraversal(BstNode *&Root);
+
+void PreOrderTraversal(BstNode *&Root);
+
+void PostOrderTraversal(BstNode *&Root);
+
 // Initialize & Return a new Node
 BstNode *SetNewNode(int Data);
