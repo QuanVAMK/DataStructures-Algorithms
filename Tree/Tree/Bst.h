@@ -7,6 +7,7 @@ struct BstNode {
 };
 
 // Custom Queue to hold pointers to BstNode
+// Used in Level Order Traversal
 class Queue
 {
 private:
@@ -41,14 +42,19 @@ void Insert(BstNode *&Root, int Data);
 // Return True if the element exists in the tree
 bool IsSearchable(const BstNode *&Root, int Data);
 
+// = Root to highest lvl that has leaf node
 int FindTreeHeight(const BstNode *&Root);
 
+// Print all nodes of given lvl & advance
 void LevelOrderTraversal(BstNode *&Root);
 
+// Left Root Right
 void InOrderTraversal(BstNode *&Root);
 
+// Root Left Right
 void PreOrderTraversal(BstNode *&Root);
 
+// Right Root Left
 void PostOrderTraversal(BstNode *&Root);
 
 // Initialize & Return a new Node

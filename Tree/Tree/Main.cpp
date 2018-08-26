@@ -14,7 +14,7 @@ int FindMaxOfTwoNums(int N1, int N2)
 }
 
 // Helper function to set a new Node
-BstNode *SetNewNode(int Data)
+BstNode* SetNewNode(int Data)
 {
 	BstNode *NewNode = new BstNode();
 	NewNode->Data = Data;
@@ -78,7 +78,7 @@ void LevelOrderTraversal(BstNode *&Root)
 	
 }
 
-void PreOrderTraversal(BstNode *&Root)
+void InOrderTraversal(BstNode *&Root)
 {
 	if (!Root) { return; }
 
@@ -87,7 +87,7 @@ void PreOrderTraversal(BstNode *&Root)
 	PreOrderTraversal(Root->Right);
 }
 
-void InOrderTraversal(BstNode *&Root)
+void PreOrderTraversal(BstNode *&Root)
 {
 	if (!Root) { return; }
 
